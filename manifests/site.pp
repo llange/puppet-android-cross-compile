@@ -28,11 +28,11 @@ define gitrepo($url) {
 class android_ndk_install($ndk_version) {
   exec {
     "download-android-ndk":
-      command => "/usr/bin/wget http://dl.google.com/android/ndk/android-ndk-$ndk_version-linux-x86_64.tar.bz2",
+      command => "/usr/bin/wget http://dl.google.com/android/ndk/android-ndk-$ndk_version-linux-x86_64.bin",
       cwd => "/home/admin/droid",
-      creates => "/home/admin/droid/android-ndk-$ndk_version-linux-x86_64.tar.bz2";
+      creates => "/home/admin/droid/android-ndk-$ndk_version-linux-x86_64.bin";
     "extract-android-ndk":
-      command => "/bin/tar jxf /home/admin/droid/android-ndk-$ndk_version-linux-x86_64.tar.bz2",
+      command => "/usr/bin/7za x /home/admin/droid/android-ndk-$ndk_version-linux-x86_64.bin",
       cwd => "/home/admin/droid",
       creates => "/home/admin/droid/android-ndk-$ndk_version",
       require => Exec["download-android-ndk"];
