@@ -122,7 +122,7 @@ node default {
     "lftp": ensure => present;
     "git": ensure => present;
     "git-svn": ensure => present;
-    "man": ensure => present;
+    "man-pages": ensure => present;
     "autoconf": ensure => present;
     "automake": ensure => present;
     "mercurial": ensure => present;
