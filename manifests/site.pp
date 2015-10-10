@@ -81,7 +81,7 @@ class android_ndk_symlinks($gcc_version) {
 
 class android_ndk {
   # settings - NDK version and gcc version
-  $ndk_version = "r10d"
+  $ndk_version = "r10e"
   $gcc_version = "4.8"
 
   class {
